@@ -1,0 +1,756 @@
+:root{
+    --main-color: #9333EA;
+    ;
+    --second-color: 
+}
+
+@import url('https://fonts.cdnfonts.com/css/tank');
+
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+}
+
+
+body{
+    font-family: 'Tank', sans-serif;
+    box-sizing: border-box;
+   
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+
+
+section{
+    padding: 10px 20px;
+    width: 85%;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    /*-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.8);*/ 
+    -webkit-border-radius: 10px;
+    background-color:#fff;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background:var(--main-color); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+/* ----------------------------- navbar section ----------------------------- */
+
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+}
+
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 10px;
+}
+
+nav h3{
+    color: var(--main-color);
+    padding: 15px;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: 500;
+}
+nav ul li a:hover{
+  
+    font-weight: 600;
+    transition: .3s all;
+}
+
+nav ul li a{
+    position: relative;
+    color: #333;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+  }
+  nav ul li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--main-color);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+  }
+  nav ul li a:hover:before{
+    width: 100%;
+  }
+  nav ul li.center a:before{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  nav ul li.upward a:before{
+    width: 100%;
+    bottom: -5px;
+    opacity: 0;
+  }
+  nav ul li.upward a:hover:before{
+    bottom: 0px;
+    opacity: 1;
+  }
+  nav ul li.forward a:before{
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+  }
+  nav ul li.forward a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+
+
+
+
+
+
+
+
+.login a{
+    color: black;
+    font-weight: 500;
+}
+
+.login .signin{
+    padding: 10px 20px 10px 20px;
+}
+.login .signin:hover{
+    color: var(--main-color);
+    transition: .4s all;
+}
+
+
+.login .signup{
+    color: azure;
+    background-color: var(--main-color);
+    border: 1px solid  var(--main-color);
+    padding: 10px 30px 10px 30px;
+    border-radius: 45px;
+    -webkit-border-radius: 45px;
+    -moz-border-radius: 45px;
+    -ms-border-radius: 45px;
+    -o-border-radius: 45px;
+    transition: .4s all;
+}
+.login .signup:hover{
+    background-color: #ffffff;
+    color: var(--main-color);
+}
+
+.responsive{
+    display: none;
+}
+.responsive i{
+    font-size: 24px;
+    color: var(--main-color);
+}
+
+/* ----------------------------- banner Section ----------------------------- */
+
+.banner{
+    
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    align-items: center;
+  
+    
+}
+
+.banner h1{
+    font-size: 60px;
+}
+
+.banner p{
+    opacity: .7;
+}
+
+.banner .btn_div{
+    margin-top: 35px;
+}
+
+.banner .btn{
+    padding: 15px 40px 15px 40px;
+    border-radius: 45px;
+    border: 1px solid  var(--main-color);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.banner .get_start{
+    background-color:  var(--main-color);
+    color: azure;
+    
+}
+
+.banner .get_start:hover{
+    background-color: #ffffff;
+    color: var(--main-color);
+    transition: .4s all;
+}
+
+
+.banner .watch{
+    margin: 20px;
+    color:  var(--main-color);
+}
+
+.banner .watch:hover{
+    background-color:var(--main-color) ;
+    color: #ffffff;
+    transition: .4s all;
+}
+
+.banner .watch i{
+    margin-right: 10px;
+}
+
+.banner .btn_div img{
+    position: absolute;
+    width: 10%;
+    max-width: 100px;
+}
+
+.banner .image,.about .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.banner .pic img,.about img{
+    position: relative;
+    z-index: 2;
+    
+}
+
+.banner .card,.about .card{
+    z-index: 1;
+   width: 400px;
+   height: 400px;
+   margin-top: 60px;
+   
+   background-color: rgb(250, 230, 248);
+   border-radius: 10% ;
+   position: absolute;
+   -webkit-border-radius: 10% ;
+   -moz-border-radius: 10% ;
+   -ms-border-radius: 10% ;
+   -o-border-radius: 10% ;
+}
+
+.banner .card_back,.about .card_back{
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    margin-top: 60px;
+    transform: rotate(-10deg);
+    
+    position: absolute;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='15' ry='15' stroke='%23D645F9FF' stroke-width='3' stroke-dasharray='20%2c 16' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    border-radius: 15px;
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+}
+
+.banner .card_back::before, .about .card_back::before{
+   inset: 5px;
+}
+
+.banner .bottom{
+    display: flex;
+    align-items: center;
+}
+
+
+
+.banner .bottom .header{
+    font-size: 25px;
+    color: black;
+    font-weight: 700;
+}
+
+.banner .bottom .p{
+    color: black;
+    opacity: .7;
+}
+
+.banner .left .images{
+    overflow: hidden;
+    padding: 40px;
+}
+
+.banner .left .images a img{
+    width: 60px;
+    height: 60px;
+    left: 15px;
+    margin: 10px -10px;
+    border-radius: 50%;
+}
+
+.banner .right{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    
+}
+
+
+.banner .right .box  img{
+    width: 1%;
+    position: absolute;
+  
+    
+}
+
+
+
+/* ----------------------------- choose section ----------------------------- */
+
+
+
+.choose .header,.course .header{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choose .top,.course .top,.review .top{
+    font-weight: 700;
+    color: var(--main-color);
+
+}
+.choose .bottom,.course .bottom,.review .bottom{
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.choose .box{
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    gap: 10px;
+    margin-top: 50px;
+
+}
+
+.choose .box .layout{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 20px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+   
+    box-shadow: 0px 24px 34px 0px #4F4E551A;
+}
+
+.choose .box h3{
+    color: black;
+    position: relative;
+}
+
+.choose .box .p{
+    color: black;
+    opacity: .7;
+}
+
+.choose .box .mentor{
+    border-top: 3px solid var(--main-color);
+}
+.choose .box .study{
+    border-top: 3px solid rgb(238, 70, 70);
+}
+.choose .box .e-book{
+    border-top: 3px solid rgb(255, 208, 0);
+}
+.choose .box .price{
+    border-top: 3px solid  #00FF47;
+    
+}
+
+.choose .box i{
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.choose .box .mentor i{
+    background-color: var(--main-color);
+    
+}
+.choose .box .study i{
+    background-color: rgb(238, 70, 70);
+    
+}
+.choose .box .e-book i{
+    background-color: rgb(255, 208, 0);
+    
+}
+.choose .box .price i{
+    background-color: #00FF47;
+}
+
+
+/* ------------------------------ about section ----------------------------- */
+
+
+.about{
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    align-items: center;
+  
+}
+
+.about h3{
+    color:  var(--main-color);
+    
+}
+
+.about button{
+    background-color: var(--main-color);
+    padding: 15px 35px;
+    color: #ffffff;
+    font-size: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+      border: 1px solid  var(--main-color);
+      font-weight: 600;
+}
+.about button:hover{
+    background-color: #ffffff;
+    color: var(--main-color);
+    transition: .4s all;
+}
+
+
+/* ----------------------------- course section ----------------------------- */ 
+
+.course .header p{
+    text-align: center;
+    opacity: .7;
+}
+
+
+
+.course .nav{
+    
+    display: flex;
+    align-items: start;
+    
+
+}
+
+.course .nav .nav-box{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.course .nav .nav-box .content{
+    margin:0 10px;
+}
+
+.course .nav .nav-box svg{
+    padding: 4px;
+    border-radius: 4px;
+    align-items: center;
+}
+
+
+.course .nav .all svg{
+    background-color: black;
+}
+
+.course .nav .design svg{
+    background-color: var(--main-color);
+}
+
+.course .nav .program svg{
+    background-color:  #FF0069;
+    
+}
+
+.course .nav .business svg{
+    background-color:  #FFA800;
+    
+}
+
+
+.course .box {
+    display: grid;
+    grid-template-columns: 4fr 4fr 4fr;
+    gap: 10px;
+    margin: 20px;
+}
+
+
+.course .box .layout{
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 24px 34px 0px #4F4E551A;
+}
+
+.course .box img{
+    width: 100%;
+}
+
+
+.course .box button{
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    margin-top: 15px;
+}
+
+.course .box .title{
+    font-size: 16px;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.course .box p{
+    opacity: .6;
+}
+
+.course .box .design button{
+    background-color: var(--main-color);
+  
+}
+
+.course .box .program button{
+    background-color:  #FF0069;
+  
+}
+.course .box .business button{
+    background-color:  #FFA800;
+  
+}
+
+.review .header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.review .slide img {
+    border-radius: 50%;
+    width: 20%;
+}
+
+.review .swiper{
+    margin-top: 30px;
+}
+
+.review .slide{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15px;
+}
+
+
+
+
+.review .slide .name{
+    font-weight: 500;
+}
+
+.review .slide .title{
+    margin: 4px;
+    opacity: .6;
+}
+
+
+.review .slide{
+    box-shadow:  10px 10px 20px #d9d9d9,
+    -10px -10px 20px #ffffff;
+    background-color: #ffffff;
+    border-radius: 81px 70px 72px 41px;
+    
+
+}
+.review .slide .p{
+    padding: 30px;
+}
+
+.swiper-button-next,.swiper-button-prev{
+    color: black !important;
+}
+
+.review  .content{
+    z-index: 2;
+    background-color: #ffffff;
+    
+}
+.review .card{
+    z-index: 1;
+    width: 100%;
+    height:100%;
+    top: 20%;
+    
+  
+    border-radius: 10% ;
+    position: absolute;
+    
+}
+
+
+
+footer{
+    background-color:  #0a0d11;
+    color: #ffffff;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+ 
+}
+
+ul, li { 
+    margin: 0; 
+    padding: 0; 
+    list-style-type: none;
+    line-height: 22px;
+    
+
+}
+
+footer .hr{
+    border: 1px solid white;
+}
+
+footer .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+
+.design-arrow{
+    position: absolute;
+    top:70%;
+}
+
+.design-arrow img{
+    width: 50%;
+    
+}
+
+.design-arrow_2{
+    position: absolute;
+    top:260%;
+}
+
+.design-arrow_2 img{
+    width: 50%;
+    
+}
+
+.design-vector{
+    
+    position: absolute;
+    top:60%;
+    right: 0px;
+    
+}
+
+.design-vector img{
+    float: right;
+    width: 35%;
+    
+}
+
+.footer .image{
+    
+}
+footer .image_rectangle{
+    position: absolute;
+    width: 5%;
+    left:-1%;
+}
+
+footer .corner{
+    position: absolute;
+    width:2%;
+}
+
+
+@media (max-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (max-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+    .banner h1{
+        font-size: 20px;
+       }
+       .banner .btn{
+        font-size: 8px;
+        padding: 5px 10px 5px 10px
+       }
+
+}
+@media (max-width:1061px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+   
+    .nav-link{
+        display: none;
+    }
+    .responsive{
+        display: block;
+       
+    }
+    
+}
+
+@media (max-width:1261px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+    
+   .banner h1{
+    font-size: 40px;
+   }
+   .banner .btn{
+    font-size: 14px;
+    padding: 10px 20px 10px 20px
+   }
+}
