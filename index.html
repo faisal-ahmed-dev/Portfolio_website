@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio Website</title>
+    <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
-     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
     <link
   rel="stylesheet"
@@ -23,30 +22,34 @@
       </div>
       
       <div>
-        <ul class="nav-link">
-            <li><a href="">Home</a></li>
+        <ul class="nav-link nav-link-1">
+            <li><a href="" class="active">Home</a></li>
             <li><a href="">Courses</a></li>
             <li><a href="">Bootcamp</a></li>
             <li><a href="">Pricing</a></li>
             <li><a href="">Graduates</a></li>
         </ul>
       </div>
-      <div class="responsive">
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
-      </div>
-      <div class="login nav-link">
+     
+      <div class="login">
         <a href="" class="signin">Sign In</a>
         <a href="" class="signup">Sign Up</a>
       </div>
+      <div class="responsive">
+        <input type="checkbox"  id="click">
+        <label for="click" class="fa fa-bars"></label>
+      
+    </div>
       
 
     </nav>
 </section>
 
 <div class="design-arrow"><img src="https://i.ibb.co/4gQKGGc/image.png" alt="image"></div>
-
+<button onclick="topFunction()" id="myBtn">
+  <a href="#header"></a>
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
   <section class="container banner">
     <div class="left">
       <h1>Find The Best Online Course & Learn For Your Future</h1>
@@ -359,13 +362,46 @@ var swiper = new Swiper(".review-slider", {
         slidesPerView:1,
       },
       500: {
-        slidesPerView: 3,
+        slidesPerView: 2,
       },
-      700: {
+      900: {
         slidesPerView: 3,
       },
    },
 });
+
+
+document.getElementById("click").addEventListener("change", function () {
+    var navLinks = document.querySelector(".nav-link-1");
+    navLinks.classList.toggle("show");
+  });
+
+
+
+  let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+ 
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+
+
+
+
+
+
 
 </script>
 

@@ -1,7 +1,6 @@
 :root{
     --main-color: #9333EA;
-    ;
-    --second-color: 
+   
 }
 
 @import url('https://fonts.cdnfonts.com/css/tank');
@@ -138,8 +137,6 @@ nav ul li a{
 
 
 
-
-
 .login a{
     color: black;
     font-weight: 500;
@@ -178,6 +175,12 @@ nav ul li a{
     font-size: 24px;
     color: var(--main-color);
 }
+
+
+input[type="checkbox"]{
+     display: none;
+  }
+
 
 /* ----------------------------- banner Section ----------------------------- */
 
@@ -672,21 +675,23 @@ footer .content {
 .design-arrow{
     position: absolute;
     top:70%;
+    z-index: -1;
 }
 
 .design-arrow img{
     width: 50%;
-    
+    z-index: -1;
 }
 
 .design-arrow_2{
     position: absolute;
     top:260%;
+    z-index: -1;
 }
 
 .design-arrow_2 img{
     width: 50%;
-    
+    z-index: -1;
 }
 
 .design-vector{
@@ -694,13 +699,13 @@ footer .content {
     position: absolute;
     top:60%;
     right: 0px;
-    
+    z-index: -1;
 }
 
 .design-vector img{
     float: right;
     width: 35%;
-    
+    z-index: -1;
 }
 
 .footer .image{
@@ -718,9 +723,33 @@ footer .corner{
 }
 
 
-@media (max-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
-@media (max-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (max-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+
+
+
+@media (max-width:1261px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+    
+    .banner h1{
+     font-size: 40px;
+    }
+    .banner .btn{
+     font-size: 14px;
+     padding: 10px 20px 10px 20px
+    }
+ }
+ 
+
+
+
+@media (max-width:1061px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+   
+   
+}
+
+
+
+@media (max-width:1041px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
     .banner h1{
         font-size: 20px;
        }
@@ -729,28 +758,191 @@ footer .corner{
         padding: 5px 10px 5px 10px
        }
 
-}
-@media (max-width:1061px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+       .banner .bottom{
+        display: none;
+       }
+       .banner {
+        
+        grid-template-columns: 4fr;
+    
+       }
+       .banner .right{
+        align-items: center;
+       }
 
-   
-    .nav-link{
+       .login .signin{
+        padding: 5px 10px 5px 10px;
+        }
+
+        .login .signup{
+            color: azure;
+            background-color: var(--main-color);
+            border: 1px solid  var(--main-color);
+            padding: 5px 10px 5px 10px;
+            border-radius: 45px;
+            -webkit-border-radius: 45px;
+            -moz-border-radius: 45px;
+            -ms-border-radius: 45px;
+            -o-border-radius: 45px;
+            transition: .4s all;
+        }
+
+
+      
+            .responsive{
+                display: block;
+                overflow-x: hidden;
+            }
+
+           .body{
+            overflow-x: hidden;
+           }
+    
+            .nav-link-1{
+              
+              
+                flex-direction: column;
+                position: absolute;
+                top: 100px;
+                display: none;
+                right: -120%;
+                width: 100%;
+                background-color: var(--main-color);
+                z-index: 99;
+                overflow-y: scroll;
+                overflow-x: hidden;
+              }
+              .nav-link-1.show {
+                display: flex;
+                right: 0%;
+                transform: translateY(0);
+                transition: all .8s ease-in-out;
+              }
+
+
+       .nav-link-1 li a{
+        
+            font-size: 20px;
+            color: #ffffff;
+            transition: all .3s ease-in-out;
+       }
+       
+
+       
+
+}
+
+
+@media (max-width:681px)  { 
+    
+    .choose .box{
+        grid-template-columns: 2fr;
+        gap: 20px;
+    }
+
+    .about{
+        grid-template-columns: 2fr  ;
+    }
+
+    .course .nav{
+        flex-direction: column;
+        gap:15px;
+    }
+    .design-arrow_2{
         display: none;
     }
-    .responsive{
-        display: block;
-       
+
+    .about .image img, .about .card, .about .card_back,.banner .image img, .banner .card, .banner .card_back{
+        max-width: 300px;
+        max-height: 300px;
+        margin-bottom: 60px;
     }
-    
+   
+
+    .course .box{
+        grid-template-columns: 2fr;
+    }
+
+    .footer{
+        grid-template-columns: 2fr 2fr ;
+    }
+
+
 }
 
-@media (max-width:1261px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
 
-    
-   .banner h1{
-    font-size: 40px;
-   }
-   .banner .btn{
-    font-size: 14px;
-    padding: 10px 20px 10px 20px
-   }
+
+@media (max-width:400px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+    .login .signin{
+        padding: 2px 5px 2px 5px;
+        font-size: 10px;
+        }
+
+        .login .signup{
+            color: azure;
+            background-color: var(--main-color);
+            border: 1px solid  var(--main-color);
+            padding: 2px 5px 2px 5px;
+            border-radius: 21px;
+            font-size: 10px;
+            -webkit-border-radius: 45px;
+            -moz-border-radius: 45px;
+            -ms-border-radius: 45px;
+            -o-border-radius: 45px;
+            transition: .4s all;
+        }
+
+}
+
+@media (max-width:300px)  { 
+nav h3{
+    padding: 2px;
+}
+
+    .login .signin{
+        padding: 2px 3px 2px 3px;
+        font-size: 10px;
+        }
+
+        .login .signup{
+            color: azure;
+            background-color: var(--main-color);
+            border: 1px solid  var(--main-color);
+            padding: 2px 3px 2px 3px;
+            border-radius: 21px;
+            font-size: 10px;
+            -webkit-border-radius: 45px;
+            -moz-border-radius: 45px;
+            -ms-border-radius: 45px;
+            -o-border-radius: 45px;
+            transition: .4s all;
+        }
+
+}
+
+
+
+/* ------------------------------- scroll top ------------------------------- */
+
+
+#myBtn{
+    display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 20px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--main-color); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 10px 10px; /* Some padding */
+  border-radius: 20px; /* Rounded corners */
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+#myBtn:hover
+{
+    font-size: 22px;
 }
